@@ -5,45 +5,66 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="app.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
     <title>Ping Pong Score Keeper</title>
 </head>
 <body>
     <main>
-        <section>
-            <div>
-                <img src="" alt="pingpong">
-            </div>
-            <div>
-                <h1>Ping Pong Score Keeper</h1>
-            </div>
-            <div>
-                <div>
-                    <span id="player-one-score">0</span>
-                    <span>to</span>
-                    <span id="player-two-score">0</span>
+    <section class="section">
+        <div class="container">
+            <div class="columns">
+                <div class="column is-half is-offset-one-quarter">
+                    <div class="card">
+                        <div class="card-image">
+                            <figure class="image is-2by1">
+                                <img src="https://images.unsplash.com/photo-1564518440696-ef272968778e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80" alt="">
+                            </figure>
+                        </div>
+                        <header class="card-header">
+                          <p class="card-header-title">
+                            Ping Pong Score Keeper
+                          </p>
+                          <button class="card-header-icon" aria-label="more options">
+                            <span class="icon">
+                              <i class="fas fa-angle-down" aria-hidden="true"></i>
+                            </span>
+                          </button>
+                        </header>
+                        <div class="card-content">
+                          <div class="content">
+                           <h1 class="title is-1">
+                            <span id="player-one-score">0</span>
+                            <span>to</span>
+                            <span id="player-two-score">0</span>
+                           </h1>
+                           <p class="subtitle">
+                            Use the buttons below to keep score.
+                           </p>
+                           <label class="label is-large is-inline" for="game-select">Playing to</label>
+                           <div class="select is-rounded">
+                            <select name="game" id="game-select">
+                                <option value=""></option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>    
+                            </select>
+                        </div>
+                          </div>
+                        </div>
+                        <footer class="card-footer">
+                            <button class="button is-primary card-footer-item" id="player-one">Player One</button>
+                            <button class="button is-info card-footer-item" id="player-two">Player Two</button>
+                            <button class="button is-danger card-footer-item" id="reset">Reset</button>
+                         
+                        </footer>
+                      </div>
                 </div>
-                <h3>Use buttons below to keep score.</h3>
-                <div>
-                    <label for="game-select">Playing to</label>
-                    <select name="game" id="game-select">
-                        <option value=""></option>
-                        <option value="5">5</option>
-                        <option value="6">6</option>
-                        <option value="7">7</option>
-                        <option value="8">8</option>
-                        <option value="9">9</option>    
-                    </select>
-                </div>
             </div>
-            <div>
-                <div>
-                    <button id="player-one">Player 1</button>
-                    <button id="player-two">Player 2</button>
-                    <button id="reset">Reset</button>
-                </div>
-            </div>
+        </div>
+    </section>
 
-        </section>
     </main>
 
 <script src="app.js"></script>

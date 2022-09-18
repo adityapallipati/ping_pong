@@ -23,6 +23,8 @@ player_one.addEventListener('click', function(e){
         updateScore1+=1;
        if (updateScore1 === winningScore) {
         isGameOver = true;
+        player_one_score.classList.add('winner');
+        player_two_score.classList.add('loser');
     }
     player_one_score.textContent = updateScore1;
     console.log(e)
@@ -34,6 +36,8 @@ player_two.addEventListener('click', function(e){
         updateScore2+=1;
     if (updateScore2 === winningScore){
         isGameOver = true;
+        player_one_score.classList.add('loser');
+        player_two_score.classList.add('winner');
     }
     player_two_score.textContent = updateScore2;
 }
@@ -48,4 +52,6 @@ function resetGame() {
     updateScore2 = 0;
     player_one_score.textContent = 0;
     player_two_score.textContent = 0;
+    player_one_score.classList.remove('winner', 'loser');
+    player_two_score.classList.remove('winner', 'loser');
 }
